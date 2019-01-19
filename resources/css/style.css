@@ -11,16 +11,15 @@ body {
 }
 
 .container {
-  display: block;
   width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-.logo {
-  display: inline-flex;
-  flex-grow: 1;
-  align-items: center;
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .logo img {
@@ -30,17 +29,38 @@ body {
 
 /* Header */
 .main-banner {
+  display: flex;
   background: url("../images/glasses-bg.png") center;
   background-size: cover;
+  width: 100%;
   height: 31rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .main-banner {
+    height: 22rem;
+  }
+}
+
 .header {
+  margin-top: 1rem;
   display: flex;
   width: auto;
   background-color: cadetblue;
   color: white;
   padding: 1rem 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    margin-top: 0px;
+  }
+}
+
+.header .logo {
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
 }
 
 nav {
@@ -67,7 +87,19 @@ nav a {
   padding: 1.5rem 5rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .headline {
+    top: 5rem;
+    right: 2rem;
+    padding: 0.75rem 4rem;
+    font-size: 1.33rem;
+  }
+}
+
 /* Main */
+main {
+  width: 100%;
+}
 /* Service Provided */
 .steps {
   display: flex;
@@ -103,7 +135,7 @@ nav a {
 .info {
   display: inline-block;
   width: 35%;
-  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .title {
@@ -118,8 +150,15 @@ nav a {
 
 /* Footer */
 footer {
+  display: block;
+  width: auto;
   padding: 4rem;
   background-color: azure;
+}
+
+footer .logo {
+  display: inline-flex;
+  align-items: center;
 }
 
 .copyright {
