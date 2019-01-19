@@ -42,6 +42,13 @@ body {
   }
 }
 
+@media only screen and (max-width: 670px) {
+  .main-banner {
+    background-position: 20%;
+    height: 17rem;
+  }
+}
+
 .header {
   margin-top: 1rem;
   display: flex;
@@ -63,9 +70,26 @@ body {
   align-items: center;
 }
 
+@media only screen and (max-width: 670px) {
+  .company-title {
+    display: none;
+  }
+}
+
 nav {
   display: inline-flex;
   align-items: center;
+}
+
+@media only screen and (min-width: 671px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .nav {
+    display: none;
+  }
 }
 
 nav a {
@@ -96,6 +120,17 @@ nav a {
   }
 }
 
+@media only screen and (max-width: 670px) {
+  .headline {
+    top: 9rem;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
 /* Main */
 main {
   width: 100%;
@@ -104,6 +139,13 @@ main {
 .steps {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 670px) {
+  .steps {
+    margin: 3.77rem auto;
+    flex-flow: column wrap;
+  }
 }
 
 .step {
@@ -116,6 +158,16 @@ main {
   height: 8rem;
   margin: 3rem 6rem 3rem 0;
 }
+
+@media only screen and (max-width: 670px) {
+  .step {
+    display: flex;
+    margin: 0 auto;
+    font-size: 0.77rem;
+    height: 5rem;
+  }
+}
+
 .step img {
   width: 5rem;
 }
@@ -125,6 +177,17 @@ main {
   height: auto;
 }
 
+@media only screen and (max-width: 670px) {
+  .step.paper {
+    margin-bottom: 1.54rem;
+    height: 7rem;
+  }
+
+  .step.ruler {
+    margin-bottom: 1.54rem;
+  }
+}
+
 /* Company Info */
 .company {
   display: flex;
@@ -132,10 +195,25 @@ main {
   margin-bottom: 5rem;
 }
 
+@media only screen and (max-width: 670px) {
+  .company {
+    display: block;
+  }
+}
+
 .info {
   display: inline-block;
   width: 35%;
   margin-left: 5%;
+}
+
+@media only screen and (max-width: 670px) {
+  .info {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 4rem;
+  }
 }
 
 .title {
@@ -148,9 +226,24 @@ main {
   width: 10rem;
 }
 
+@media only screen and (max-width: 670px) {
+  .title {
+    padding: 0.5rem 0;
+    width: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .info p {
+    font-size: 0.77rem;
+    margin: 0 0.25rem;
+  }
+}
+
 /* Footer */
 footer {
-  display: block;
+  display: flex;
   width: auto;
   padding: 4rem;
   background-color: azure;
@@ -163,4 +256,14 @@ footer .logo {
 
 .copyright {
   display: inline-flex;
+}
+
+@media only screen and (max-width: 670px) {
+  footer {
+    justify-content: center;
+  }
+
+  .copyright {
+    display: none;
+  }
 }
